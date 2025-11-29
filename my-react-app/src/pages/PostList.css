@@ -1,0 +1,141 @@
+.page-description {
+  color: #bbdefb;
+  font-size: 22px;
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+}
+
+.posts-container {
+  margin-top: 40px;
+  display: grid;
+  gap: 30px;
+}
+
+.post {
+  background: linear-gradient(145deg, rgba(30, 30, 70, 0.8), rgba(20, 20, 50, 0.9));
+  border: 1px solid rgba(100, 181, 246, 0.3);
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.post::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #64b5f6, #e91e63, #64b5f6);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.post:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(100, 181, 246, 0.3);
+  border-color: #64b5f6;
+}
+
+.cosmic-post {
+  display: flex;
+  gap: 0;
+}
+
+.cosmic-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.post:hover .cosmic-image {
+  transform: scale(1.05);
+}
+
+.post-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.post h3 {
+  margin: 0 0 15px 0;
+  color: #ffffff;
+  font-size: 1.8rem;
+  background: linear-gradient(45deg, #64b5f6, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.post-date {
+  color: #bbdefb;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-preview {
+  color: #e3f2fd;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+
+.read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #64b5f6;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 1px solid #64b5f6;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(100, 181, 246, 0.1);
+  font-size: 18px;
+}
+
+.read-link:hover {
+  background: #64b5f6;
+  color: #0c0c2e;
+  box-shadow: 0 0 20px rgba(100, 181, 246, 0.5);
+  transform: translateX(5px);
+}
+
+.loading {
+  text-align: center;
+  font-size: 24px;
+  color: #bbdefb;
+  margin: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.loading::after {
+  content: '🛰️';
+  animation: orbit 2s infinite linear;
+  font-size: 28px;
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,14 @@
+.footer {
+  padding: 30px 20px;
+  background: rgba(10, 10, 40, 0.95);
+  border-top: 1px solid rgba(100, 181, 246, 0.3);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.footer p {
+  color: #bbdefb;
+  font-size: 16px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+}
