@@ -2,5 +2,24 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 25px;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 180px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 30px 20px;
+    min-height: calc(100vh - 200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 20px 15px;
+  }
 }

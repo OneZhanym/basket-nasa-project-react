@@ -1,4 +1,5 @@
 .back-link {
+  font-family: 'Montserrat', sans-serif;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -11,6 +12,7 @@
   transition: all 0.3s ease;
   background: rgba(100, 181, 246, 0.1);
   font-size: 18px;
+  font-weight: 600;
 }
 
 .back-link:hover {
@@ -40,9 +42,10 @@
 }
 
 .detail-title {
+  font-family: 'Orbitron', monospace;
   margin: 0 0 35px 0;
   color: #ffffff;
-  font-size: 3rem; 
+  font-size: 3rem;
   text-align: center;
   background: linear-gradient(45deg, #64b5f6, #e91e63, #64b5f6);
   background-size: 200% 100%;
@@ -50,6 +53,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: titleShimmer 3s ease-in-out infinite;
+  font-weight: 700;
 }
 
 @keyframes titleShimmer {
@@ -79,6 +83,7 @@
 }
 
 .meta-label {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #bbdefb;
   font-size: 16px;
@@ -87,16 +92,19 @@
 }
 
 .meta-item span:last-child {
+  font-family: 'Montserrat', sans-serif;
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
 }
 
 .detail-text {
-  font-size: 19px; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
   line-height: 1.8;
   color: #e3f2fd;
   text-align: justify;
+  font-weight: 400;
 }
 
 .loading-container {
@@ -106,6 +114,8 @@
 }
 
 .loading-container h2 {
+  font-family: 'Orbitron', monospace;
   margin-bottom: 25px;
-  font-size: 2rem; 
+  font-size: 2rem;
+  font-weight: 700;
 }

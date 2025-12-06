@@ -50,6 +50,7 @@ const cosmicImages = [
   }
 ];
 
+
 export default function PostDetail() {
     const { id } = useParams();
     const [post, setPost] = useState(null);

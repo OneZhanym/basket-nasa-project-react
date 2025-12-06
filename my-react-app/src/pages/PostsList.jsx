@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import './PostList.css'
+import './PostList.css';
 
 // Данные космических снимков
 const cosmicImages = [
@@ -56,9 +56,22 @@ export default function PostsList() {
     if (loading) return <div className="loading">🛰️ Загрузка космических данных...</div>;
 
     return (
-        <div>
-            <h1>🚀 Космические снимки NASA</h1>
-            <p className="page-description">Откройте для себя удивительные космические объекты через объективы телескопов NASA</p>
+        <div className="posts-list-container">
+            <div className="main-title-container">
+                <h1 className="main-title">
+                    <span className="title-text">
+                        <span className="title-part left">🚀 КОСМИЧЕСКИЕ</span>
+                        <span className="title-part right">СНИМКИ NASA</span>
+                    </span>
+                    <span className="title-glow"></span>
+                    <span className="title-particles">✦ ✦ ✦</span>
+                </h1>
+                <div className="title-subtitle">Исследуйте Вселенную через объективы телескопов</div>
+            </div>
+            
+            <p className="page-description">
+                Откройте для себя удивительные космические объекты через объективы телескопов NASA
+            </p>
             
             <div className="posts-container">
                 {posts.map(post => (
