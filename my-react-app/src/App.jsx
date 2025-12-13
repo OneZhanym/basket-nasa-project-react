@@ -1,21 +1,25 @@
 import { Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
 import PostsList from "./pages/PostsList";
 import PostDetail from "./pages/PostDetail";
-import Layout from "./layout/Layout";
 
+import BasketList from './pages/BasketList';
+import BasketDetail from './pages/BasketDetail';
+import CreateOrder from './pages/CreateOrder';
+import UpdateOrder from './pages/UpdateOrder';
 
 export default function App() {
   return (
     <Routes>
-
       <Route path="/" element={<Layout/>} >
-
-      <Route  index  element={<PostsList />} />
-      <Route path="/post/:id" element={<PostDetail />} />
-
+        <Route index element={<PostsList />} />
+        <Route path="post/:id" element={<PostDetail />} />
+        
+        <Route path="basket" element={<BasketList />} />
+        <Route path="basket/:id" element={<BasketDetail />} />
+        <Route path="order/new" element={<CreateOrder />} />
+        <Route path="order/edit/:id" element={<UpdateOrder />} />
       </Route>
-
-
     </Routes>
   );
 }

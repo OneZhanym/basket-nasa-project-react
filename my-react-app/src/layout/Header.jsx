@@ -10,6 +10,7 @@ export default function Header(){
                 <Link to='#'>Миссии</Link>
                 <Link to='#'>О NASA</Link>
                 <Link to="#">Контакты</Link>
+                <Link to="/basket">🛒 Корзина</Link>
             </nav>
         </header>
     )
