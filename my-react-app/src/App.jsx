@@ -7,8 +7,12 @@ import BasketList from './pages/BasketList';
 import BasketDetail from './pages/BasketDetail';
 import CreateOrder from './pages/CreateOrder';
 import UpdateOrder from './pages/UpdateOrder';
-
 import Products from './pages/Products';
+
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+
 export default function App() {
   return (
     <Routes>
@@ -21,6 +25,9 @@ export default function App() {
         <Route path="order/new" element={<CreateOrder />} />
         <Route path="order/edit/:id" element={<UpdateOrder />} />
         <Route path="products" element={<Products />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>
   );

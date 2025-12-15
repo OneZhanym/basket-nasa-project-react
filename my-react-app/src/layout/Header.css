@@ -1,20 +1,20 @@
 .header {
-  background: rgba(10, 10, 40, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid #64b5f6;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  width: 100vw;
-  margin: 0;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
+    background: rgba(10, 10, 40, 0.98); 
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid #64b5f6;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100vw;
+    margin: 0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .header-logo {
@@ -138,4 +138,78 @@
   .header-logo {
     font-size: 1.4rem;
   }
+}
+
+/* Стили для кнопок авторизации */
+.login-link,
+.register-link,
+.profile-link {
+    background: rgba(100, 181, 246, 0.1) !important;
+    border: 1px solid rgba(100, 181, 246, 0.3) !important;
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.login-link {
+    background: linear-gradient(45deg, rgba(100, 181, 246, 0.1), rgba(233, 30, 99, 0.1)) !important;
+    border: 1px solid rgba(100, 181, 246, 0.4) !important;
+}
+
+.register-link {
+    background: linear-gradient(45deg, rgba(233, 30, 99, 0.1), rgba(100, 181, 246, 0.1)) !important;
+    border: 1px solid rgba(233, 30, 99, 0.4) !important;
+}
+
+.profile-link {
+    background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(100, 181, 246, 0.1)) !important;
+    border: 1px solid rgba(76, 175, 80, 0.4) !important;
+}
+
+.logout-btn-header {
+    background: rgba(244, 67, 54, 0.1) !important;
+    border: 1px solid rgba(244, 67, 54, 0.3) !important;
+    color: #ff8a80 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.3px;
+}
+
+.login-link:hover,
+.register-link:hover,
+.profile-link:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 0 20px rgba(100, 181, 246, 0.4) !important;
+    color: #ffffff !important;
+}
+
+.login-link:hover {
+    background: linear-gradient(45deg, rgba(100, 181, 246, 0.3), rgba(233, 30, 99, 0.3)) !important;
+    box-shadow: 0 0 20px rgba(100, 181, 246, 0.5) !important;
+}
+
+.register-link:hover {
+    background: linear-gradient(45deg, rgba(233, 30, 99, 0.3), rgba(100, 181, 246, 0.3)) !important;
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.5) !important;
+}
+
+.profile-link:hover {
+    background: linear-gradient(45deg, rgba(76, 175, 80, 0.3), rgba(100, 181, 246, 0.3)) !important;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
+}
+
+.logout-btn-header:hover {
+    background: rgba(244, 67, 54, 0.2) !important;
+    border-color: rgba(244, 67, 54, 0.5) !important;
+    color: #ff5252 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(244, 67, 54, 0.4);
 }

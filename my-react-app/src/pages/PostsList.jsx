@@ -44,8 +44,13 @@ const cosmicImages = [
 export default function PostsList() {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    const [isAuth, setIsAuth] = useState(false);
+    
     useEffect(() => {
+        // Проверяем авторизацию
+        const authStatus = localStorage.getItem('isAuth');
+        setIsAuth(!!authStatus);
+        
         // Имитация загрузки данных
         setTimeout(() => {
             setPosts(cosmicImages);
@@ -69,6 +74,45 @@ export default function PostsList() {
                 <div className="title-subtitle">Исследуйте Вселенную через объективы телескопов</div>
             </div>
             
+            {!isAuth && (
+                <div className="auth-banner">
+                    <div className="auth-banner-content">
+                        <h2 className="auth-banner-title">
+                            <span className="auth-icon">🎯</span> Получите больше возможностей!
+                        </h2>
+                        <p className="auth-banner-text">Зарегистрируйтесь или войдите в аккаунт, чтобы:</p>
+                        <ul className="auth-features">
+                            <li className="auth-feature">
+                                <span className="feature-icon">💾</span>
+                                <span>Сохранять любимые космические снимки</span>
+                            </li>
+                            <li className="auth-feature">
+                                <span className="feature-icon">⭐</span>
+                                <span>Добавлять в избранное для быстрого доступа</span>
+                            </li>
+                            <li className="auth-feature">
+                                <span className="feature-icon">🛍️</span>
+                                <span>Совершать покупки в космическом магазине</span>
+                            </li>
+                            <li className="auth-feature">
+                                <span className="feature-icon">📊</span>
+                                <span>Отслеживать историю просмотров</span>
+                            </li>
+                        </ul>
+                        <div className="auth-buttons">
+                            <Link to="/login" className="auth-btn login-btn">
+                                <span className="btn-icon">🔑</span>
+                                Войти в аккаунт
+                            </Link>
+                            <Link to="/register" className="auth-btn register-btn">
+                                <span className="btn-icon">🚀</span>
+                                Начать исследование
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            )}
+            
             <p className="page-description">
                 Откройте для себя удивительные космические объекты через объективы телескопов NASA
             </p>
@@ -90,6 +134,16 @@ export default function PostsList() {
                     </div>
                 ))}
             </div>
+            
+            {isAuth && (
+                <div className="welcome-message">
+                    <div className="welcome-content">
+                        <h3>👋 Добро пожаловать, исследователь!</h3>
+                        <p>Вы получили доступ ко всем возможностям NASA Explorer</p>
+                        <Link to="/profile" className="profile-link-btn">Перейти в профиль</Link>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
