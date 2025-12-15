@@ -7,10 +7,10 @@ export default function Header(){
             <h2 className="header-logo">🌌 NASA Explorer</h2>
             <nav className="nav">
                 <Link to='/'>Космические снимки</Link>
+                <Link to='/products'>🛍️ Магазин</Link>
+                <Link to='/basket'>🛒 Корзина</Link>
                 <Link to='#'>Миссии</Link>
                 <Link to='#'>О NASA</Link>
-                <Link to="#">Контакты</Link>
-                <Link to="/basket">🛒 Корзина</Link>
             </nav>
         </header>
     )

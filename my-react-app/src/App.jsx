@@ -8,6 +8,7 @@ import BasketDetail from './pages/BasketDetail';
 import CreateOrder from './pages/CreateOrder';
 import UpdateOrder from './pages/UpdateOrder';
 
+import Products from './pages/Products';
 export default function App() {
   return (
     <Routes>
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="basket/:id" element={<BasketDetail />} />
         <Route path="order/new" element={<CreateOrder />} />
         <Route path="order/edit/:id" element={<UpdateOrder />} />
+        <Route path="products" element={<Products />} />
       </Route>
     </Routes>
   );
