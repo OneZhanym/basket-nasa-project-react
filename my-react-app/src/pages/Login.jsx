@@ -10,18 +10,25 @@ export default function Login() {
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
-        e.preventDefault();
-        setError('');
+    e.preventDefault();
+    setError('');
 
-        const savedUser = JSON.parse(localStorage.getItem('user'));
-        if (savedUser && savedUser.email === email && savedUser.password === password) {
-            localStorage.setItem('isAuth', 'true');
-            window.dispatchEvent(new Event('storage'));
-            navigate('/profile')
-        } else {
-            setError('Неверный логин или пароль');
-        }
-    };
+    const savedUser = JSON.parse(localStorage.getItem('user'));
+    if (savedUser && savedUser.email === email && savedUser.password === password) {
+        const userInfo = {
+            isAuth: true,
+            firstName: savedUser.firstName,
+            lastName: savedUser.lastName,
+            email: savedUser.email
+        };
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+        localStorage.setItem('isAuth', 'true');
+        window.dispatchEvent(new Event('storage'));
+        navigate('/profile');
+    } else {
+        setError('Неверный email или пароль');
+    }
+};
     
     return (
         <div className="login-container">
