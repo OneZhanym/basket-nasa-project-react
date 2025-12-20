@@ -32,8 +32,9 @@ export default function Header() {
                 <Link to='/'>Космические снимки</Link>
                 <Link to='/products'>🛍️ Магазин</Link>
                 <Link to='/basket'>🛒 Корзина</Link>
-                <Link to='#'>Миссии</Link>
-                <Link to='#'>О NASA</Link>
+                <Link to='/orders'>📋 Мои заказы</Link>
+                <Link to='/contacts'>📞 Контакты</Link>
+                <Link to='/about'>🚀 О NASA Explorer</Link>
                 
                 {isAuth ? (
                     <>
